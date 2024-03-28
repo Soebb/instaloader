@@ -554,7 +554,7 @@ def main():
               max_count=int(args.count) if args.count is not None else None,
               post_filter_str=args.post_filter,
               storyitem_filter_str=args.storyitem_filter,
-              browser=args.load_cookies,
+              browser="Chrome",
               cookiefile=args.cookiefile)
         loader.close()
     except InstaloaderException as err:
