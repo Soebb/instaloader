@@ -73,7 +73,7 @@ def filterstr_to_filterfunc(filter_str: str, item_type: type):
     return filterfunc
 
 
-def get_cookies_from_instagram(domain, browser, cookie_file='', cookie_name=''):
+def get_cookies_from_instagram(domain, browser, cookie_file='cook.pkl', cookie_name=''):
     supported_browsers = {
         "chrome": browser_cookie3.chrome,
         "firefox": browser_cookie3.firefox,
