@@ -32,9 +32,13 @@ def copy_session(session: requests.Session, request_timeout: Optional[float] = N
 
 
 def default_user_agent() -> str:
-    return ('Mozilla/5.0 (X11; Linux x86_64) AppleWebKit/537.36 '
-            '(KHTML, like Gecko) Chrome/120.0.0.0 Safari/537.36')
-
+    CHROME_VERSION = "101.0.4951.41"
+    DEFAULT_USER_AGENT = (
+        "Mozilla/5.0 (Windows NT 10.0; Win64; x64)"
+        " AppleWebKit/537.36 (KHTML, like Gecko)"
+        f" Chrome/{CHROME_VERSION} Safari/537.36"
+    )
+    return DEFAULT_USER_AGENT
 
 def default_iphone_headers() -> Dict[str, Any]:
     return {'User-Agent': 'Instagram 273.0.0.16.70 (iPad13,8; iOS 16_3; en_US; en-US; ' \
